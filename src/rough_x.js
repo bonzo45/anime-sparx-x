@@ -1,8 +1,6 @@
 import React from 'react';
 import anime from 'animejs';
 
-import logo from './rough_x.svg';
-
 export class RoughX extends React.Component {
     componentDidMount() {
         const timeline = anime.timeline({
@@ -26,7 +24,6 @@ export class RoughX extends React.Component {
     }
 
     render() {
-        {/*return <img src={logo} className="App-logo" alt="logo" />*/}
         return (
             <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
                 <g>
