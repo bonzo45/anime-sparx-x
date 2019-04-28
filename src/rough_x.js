@@ -6,25 +6,42 @@ export class RoughX extends React.Component {
         const timeline = anime.timeline({
             loop: true,
         });
+
+        // Animate Water
+        // - waves
         timeline.add({
-          targets: '#sparx_x',
-          strokeDashoffset: [anime.setDashoffset, 0],
-          easing: 'linear',
-          duration: 1500
-        }, 0);
+            targets: '#wave',
+            d: {
+                value: "m83.5,221.4375c52,55 80,50 112,3c32,-47 74,-55 105,-2c31,53 76,60 102,1c26,-59 77,-40 99,2c22,42 2,120 1.5,119.5625c0.5,0.4375 -416.5,-5.5625 -417,-6l-2.5,-117.5625z",
+                // elasticity: 500,
+            },
+            duration: 1000,
+            easing: 'easeInOutCubic',
+            direction: 'alternate',
+            loop: true,
+        },
+        // - rising
+        {
+            targets: '#wave',
+            translateX: [1000, 0],
+            duration: 10000,
+            easing: 'linear',
+        });
+
+        // Animate Sparks
         timeline.add({
-          targets: 'line',
+          targets: '.spark',
           strokeDashoffset: [anime.setDashoffset, 0],
           easing: 'easeInOutCubic',
           delay: function(el, i) { return i * 5 },
           duration: 400
         }, 1400);
-        timeline.add({duration: 1500}, 1900);
+
         anime(timeline);
     }
 
     render() {
-        return (
+        const sparxX = (
             <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
                 <g>
                     <path stroke-linecap="round" id="sparx_x" d="m221.5,192.5l-114.5,-174.5l132,0l50,85l53,-86l127,-1l-107,172l124,194l-134,1l-62,-105l-63,105l-135,1l129.5,-191.5z" fill-opacity="null" stroke-opacity="null" stroke-width="5" stroke="#000" fill="#fff"/>
@@ -61,5 +78,24 @@ export class RoughX extends React.Component {
                 </g>
             </svg>
         )
+
+        const water = (
+            <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path
+                        id="svg_7"
+                        d="m83.5,221.4375c32,-86 93,-53 112,3c19,56 100,38 105,-2c5,-40 93,-67 102,1c9,68 99,43 99,2c0,-41 2,120 1.5,119.5625c0.5,0.4375 -416.5,-5.5625 -417,-6l-2.5,-117.5625z"
+                        fill-opacity="null"
+                        stroke-opacity="null"
+                        stroke-width="1.5"
+                        stroke="#000"
+                        stroke-dasharray="4"
+                        fill="#0cc9c3"
+                    />
+                </g>
+            </svg>
+        )
+
+        return sparxX;
     }
 };
