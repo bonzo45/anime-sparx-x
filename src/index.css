@@ -6,7 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #00b1dc;
+  background-color: #fff;
+  /*background-color: #00b1dc;*/
 
   position:absolute;
   height: 100%;
@@ -15,4 +16,10 @@ body {
 
 #root {
     height: 100%;
+}
+
+svg {
+  width: 480px;
+  height: 480px;
+  padding-bottom: 20px;
 }

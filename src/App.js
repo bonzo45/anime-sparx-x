@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import { RoughX } from './rough_x';
+import { SimpleX } from './simple_x';
 import { Messages } from './messages';
 
 function App() {
   return (
     <div className="App">
-        <RoughX/>
+        <SimpleX/>
         <Messages/>
     </div>
   );
