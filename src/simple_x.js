@@ -13,7 +13,7 @@ export class SimpleX extends React.Component {
             targets: '#water',
             translateY: [480, 0],
             duration: 10000,
-            easing: 'easeInOutCubic',
+            easing: 'linear',
             direction: 'alternate',
         }, 0);
 
@@ -33,7 +33,7 @@ export class SimpleX extends React.Component {
             targets: '#water',
             keyframes,
             duration: 10000,
-            easing: 'easeInOutCubic',
+            easing: 'easeInOutSine',
             direction: 'alternate',
             loop: 3,
         }, 0);
@@ -51,13 +51,13 @@ export class SimpleX extends React.Component {
               <g>
                 <g>
                   <g>
-                    <use xlinkHref="#water" opacity="1" fill="#00b7e0" fill-opacity="1"/>
+                    <use xlinkHref="#water" opacity="1" fill="#00b7e0" fillOpacity="1"/>
                     <g>
-                      <use xlinkHref="#water" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="1"/>
+                      <use xlinkHref="#water" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1"/>
                     </g>
                   </g>
                   <g>
-                    <use xlinkHref="#sparxX" opacity="1" fill="#000000" fill-opacity="1"/>
+                    <use xlinkHref="#sparxX" opacity="1" fill="#000000" fillOpacity="1"/>
                   </g>
                 </g>
               </g>
