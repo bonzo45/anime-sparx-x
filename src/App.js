@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
         <SimpleX/>
-        {/*// <Messages/>*/}
+        <Messages/>
     </div>
   );
 }

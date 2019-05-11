@@ -27,7 +27,7 @@ export class SimpleX extends React.Component {
         const endTime = 1000;
 
         const timeline = anime.timeline({
-            // loop: true,
+            loop: true,
             endDelay: endTime,
         });
 
