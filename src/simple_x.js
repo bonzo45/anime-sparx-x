@@ -8,13 +8,11 @@ const white = '#ffffff';
 const black = '#000000';
 const skinnyStroke = '3';
 const fatStroke = '5';
-const sparkStroke = () => Math.random() * 5 + 3;
+const sparkStroke = () => Math.random() * 3 + 3;
 const sparkStrokeColour = () => {
     const r = Math.random();
-    if (r < 0.3) {
+    if (r < 0.4) {
         return black;
-    } else if (r < 0.6) {
-        return sparxBlue;
     } else {
         return sparxBlue;
     }
@@ -22,20 +20,20 @@ const sparkStrokeColour = () => {
 
 export class SimpleX extends React.Component {
     componentDidMount() {
-        const fillTime = 0;
-        const shakeTime = 0;
+        const fillTime = 10000;
+        const shakeTime = 1000;
         const sparkTime = 500;
         const endTime = 1000;
 
         const timeline = anime.timeline({
-            loop: true,
+            // loop: true,
             endDelay: endTime,
         });
 
         // Up-Down
         timeline.add({
             targets: '#water',
-            translateY: [480+60, 0],
+            translateY: [640, 0],
             duration: fillTime,
             easing: 'linear',
             direction: 'alternate',
@@ -139,19 +137,19 @@ export class SimpleX extends React.Component {
             targets: 'body',
             background: [backgroundGrey, sparxBlue],
             easing: 'easeInOutSine',
-            duration: 200,
+            duration: sparkTime,
         }, fillTime + shakeTime)
         timeline.add({
             targets: '#sparxX',
             fill: [backgroundGrey, sparxBlue],
             easing: 'easeInOutSine',
-            duration: 200,
+            duration: sparkTime,
         }, fillTime + shakeTime)
         timeline.add({
             targets: '#water',
             fill: [sparxBlue, white],
             easing: 'easeInOutSine',
-            duration: 200,
+            duration: sparkTime,
         }, fillTime + shakeTime)
 
         // Animate Sparks
