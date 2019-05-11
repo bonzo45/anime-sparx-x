@@ -5,7 +5,7 @@ export class SimpleX extends React.Component {
     componentDidMount() {
         const fillTime = 4000;
         const shakeTime = 1000;
-        const sparkTime = 300;
+        const sparkTime = 200;
         const endTime = 1000;
 
         const timeline = anime.timeline({
@@ -111,20 +111,9 @@ export class SimpleX extends React.Component {
                 { value: 0 },
                 { value: 0 },
             ],
-            // scale: [
-            //     { value: 1 },
-            //     { value: 0.8 },
-            //     { value: 1.05 },
-            // ],
             duration: shakeTime,
+            easing: 'easeInOutSine',
         }, fillTime)
-
-        // // Grow
-        // timeline.add({
-        //     targets: ['#sparxXOutline', '#sparxX', '#water'],
-        //     scale: [1, 1.05],
-        //     duration: shakeTime,
-        // }, fillTime)
 
         // Background Colour(s)
         timeline.add({
@@ -139,6 +128,12 @@ export class SimpleX extends React.Component {
             easing: 'easeInOutSine',
             duration: 200,
         }, fillTime + shakeTime)
+        timeline.add({
+            targets: '#water',
+            fill: ['#00b7e0', '#ffffff'],
+            easing: 'easeInOutSine',
+            duration: 200,
+        }, fillTime + shakeTime)
 
         // Animate Sparks
         timeline.add({
@@ -146,7 +141,7 @@ export class SimpleX extends React.Component {
           strokeDashoffset: [anime.setDashoffset, 0],
           easing: 'easeInOutCubic',
           // delay: function(el, i) { return i * 5 },
-          duration: 400,
+          duration: sparkTime,
         }, fillTime + shakeTime);
 
         anime(timeline);
@@ -173,45 +168,45 @@ export class SimpleX extends React.Component {
                             <use xlinkHref="#sparxXOutline" opacity="1" stroke="#000000" fillOpacity="0" strokeWidth="5"/>
                         </g>
                         <g>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L186.89 187.57"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L212.76 205.14"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L232.84 225.41"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L186.89 401.08"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L244.58 242.49"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L258.96 251.05"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L298.66 184.81"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L348.68 118.57"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L340.56 149.66"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L296.63 245.65"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L309.47 236.18"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L405.46 138.85"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L462.23 95.59"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L451.42 138.85"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L382.47 225.37"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L612.29 88.83"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L643.39 79.36"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L488.31 197.2"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L418.97 249.92"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L563.63 194.27"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L688 184.81"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L543.35 251.05"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L510.9 263.37"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L386.53 299.72"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L647.48 267.28"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L436.55 315.03"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L377.74 327.4"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L506.85 357.85"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L418.97 351.09"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L440.6 380.83"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L493.93 436.26"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L301.36 353.93"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L436.55 444.37"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L475.75 530.89"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L301.36 386.24"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L342.59 478.19"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L258.96 366.31"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L271.62 444.37"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="5" strokeOpacity="1" d="M212.76 300.95L212.76 411.93"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L186.89 187.57"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L212.76 205.14"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L232.84 225.41"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L186.89 401.08"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L244.58 242.49"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L258.96 251.05"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L298.66 184.81"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L348.68 118.57"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L340.56 149.66"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L296.63 245.65"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L309.47 236.18"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L405.46 138.85"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L462.23 95.59"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L451.42 138.85"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L382.47 225.37"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L612.29 88.83"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L643.39 79.36"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L488.31 197.2"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L418.97 249.92"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L563.63 194.27"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L688 184.81"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L543.35 251.05"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L510.9 263.37"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L386.53 299.72"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L647.48 267.28"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L436.55 315.03"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L377.74 327.4"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L506.85 357.85"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L418.97 351.09"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L440.6 380.83"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L493.93 436.26"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L301.36 353.93"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L436.55 444.37"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L475.75 530.89"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L301.36 386.24"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L342.59 478.19"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L258.96 366.31"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L271.62 444.37"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke="#000000" strokeWidth="3" strokeOpacity="1" d="M212.76 300.95L212.76 411.93"/>
                         </g>
                     </g>
                 </g>
