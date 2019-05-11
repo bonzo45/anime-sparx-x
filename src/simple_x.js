@@ -8,6 +8,10 @@ export class SimpleX extends React.Component {
         const sparkTime = 200;
         const endTime = 1000;
 
+        const backgroundGrey = '#94b3ba';
+        const sparxBlue = '#00b1dc';
+        const white = '#ffffff';
+
         const timeline = anime.timeline({
             loop: true,
             endDelay: endTime,
@@ -118,19 +122,19 @@ export class SimpleX extends React.Component {
         // Background Colour(s)
         timeline.add({
             targets: 'body',
-            background: '#00b1dc',
+            background: [backgroundGrey, sparxBlue],
             easing: 'easeInOutSine',
             duration: 200,
         }, fillTime + shakeTime)
         timeline.add({
             targets: '#sparxX',
-            fill: ['#94b3ba', '#00b1dc'],
+            fill: [backgroundGrey, sparxBlue],
             easing: 'easeInOutSine',
             duration: 200,
         }, fillTime + shakeTime)
         timeline.add({
             targets: '#water',
-            fill: ['#00b7e0', '#ffffff'],
+            fill: [sparxBlue, white],
             easing: 'easeInOutSine',
             duration: 200,
         }, fillTime + shakeTime)
