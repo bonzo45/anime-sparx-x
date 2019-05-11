@@ -10,8 +10,9 @@ const skinnyStroke = '3';
 const fatStroke = '5';
 const sparkStroke = () => Math.random() * 3 + 3;
 const sparkStrokeColour = () => {
+    // return black;
     const r = Math.random();
-    if (r < 0.4) {
+    if (r < 0.6) {
         return black;
     } else {
         return sparxBlue;
@@ -191,7 +192,7 @@ export class SimpleX extends React.Component {
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L244.58 242.49"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L258.96 251.05"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L298.66 184.81"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L348.68 105.57"/>
+                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L305.68 105.57"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L360.56 149.66"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L296.63 245.65"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L309.47 236.18"/>
@@ -202,11 +203,8 @@ export class SimpleX extends React.Component {
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L630.39 79.36"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L488.31 197.2"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L418.97 249.92"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L563.63 194.27"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L620 184.81"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L543.35 251.05"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L510.9 263.37"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L386.53 299.72"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L600.48 267.28"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L436.55 315.03"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L377.74 327.4"/>
@@ -217,7 +215,6 @@ export class SimpleX extends React.Component {
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L301.36 353.93"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L436.55 444.37"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L475.75 530.89"/>
-                            <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L301.36 386.24"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L342.59 518.1"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L258.96 366.31"/>
                             <path className="spark" strokeLinecap="round" opacity="1" fillOpacity="0" stroke={sparkStrokeColour()} strokeWidth={sparkStroke()} strokeOpacity="1" d="M212.76 300.95L271.62 444.37"/>
