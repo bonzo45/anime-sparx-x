@@ -24,3 +24,7 @@ svg {
   height: 480px;
   padding-bottom: 20px;
 }
+
+.spark {
+  /*stroke-dasharray: 50px 1000px;*/
+}
