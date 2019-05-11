@@ -4,6 +4,7 @@ import anime from 'animejs';
 const actuallyGrey = '#94b3ba';
 const backgroundGrey = '#ffffff';
 const sparxBlue = '#00b1dc';
+const sparxOrange = '#f9650e';
 const white = '#ffffff';
 const black = '#000000';
 const skinnyStroke = '3';
@@ -149,13 +150,6 @@ export class SimpleX extends React.Component {
         timeline.add({
             targets: '#water',
             fill: [sparxBlue, white],
-            easing: 'easeInOutSine',
-            duration: sparkTime,
-        }, fillTime + shakeTime)
-        timeline.add({
-            targets: '.message',
-            backgroundColor: [sparxBlue, white],
-            color: [white, black],
             easing: 'easeInOutSine',
             duration: sparkTime,
         }, fillTime + shakeTime)
