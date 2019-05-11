@@ -4,16 +4,18 @@ import anime from 'animejs';
 
 export class Messages extends React.Component {
     componentDidMount() {
+        const messageVisibleTime = 6000;
+        const messageAnimationTime = 500;
         anime({
             targets: '.message',
             easing: 'easeInOutCubic',
             keyframes: [
                 {translateY: '-100%', duration: 0},
-                {translateY: '0%', duration: 500},
-                {translateY: '0%', duration: 4500},
-                {translateY: '100%', duration: 500},
+                {translateY: '0%', duration: messageAnimationTime},
+                {translateY: '0%', duration: messageVisibleTime},
+                {translateY: '100%', duration: messageAnimationTime},
             ],
-            delay: function(el, i) { return i * 5000 },
+            delay: function(el, i) { return i * (messageAnimationTime + messageVisibleTime) },
             loop: true,
         })
     }
