@@ -152,6 +152,13 @@ export class SimpleX extends React.Component {
             easing: 'easeInOutSine',
             duration: sparkTime,
         }, fillTime + shakeTime)
+        timeline.add({
+            targets: '.message',
+            backgroundColor: [sparxBlue, white],
+            color: [white, black],
+            easing: 'easeInOutSine',
+            duration: sparkTime,
+        }, fillTime + shakeTime)
 
         // Animate Sparks
         timeline.add({
