@@ -4,7 +4,7 @@ import anime from 'animejs';
 
 export class Messages extends React.Component {
     componentDidMount() {
-        const messageVisibleTime = 6000;
+        const messageVisibleTime = 2500;
         const messageAnimationTime = 500;
         anime({
             targets: '.message',
@@ -25,8 +25,9 @@ export class Messages extends React.Component {
             <div className="messages">
                 <div className="message"><div className="text">Preparing Sparx Homework...</div></div>
                 <div className="message"><div className="text">Writing down bookwork...</div></div>
-                <div className="message"><div className="text">Generating graphs...</div></div>
                 <div className="message"><div className="text">Rendering help videos...</div></div>
+                <div className="message"><div className="text">Ready!</div></div>
+                <div className="message"><div className="text">Generating graphs...</div></div>
                 <div className="message"><div className="text">Loading times tables...</div></div>
                 <div className="message"><div className="text">Baking bar charts...</div></div>
                 <div className="message"><div className="text">Finding fractions...</div></div>

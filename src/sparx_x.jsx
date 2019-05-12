@@ -24,7 +24,7 @@ const sparkStrokeColour = () => {
 }
 
 // Animation Times
-const fillTime = 10000;
+const fillTime = 8000;
 const shakeTime = 1000;
 const sparkTime = 500;
 const endTime = 1000;
