@@ -20,7 +20,7 @@ const sparkStrokeColour = () => {
     }
 }
 
-export class SimpleX extends React.Component {
+export class SparxX extends React.Component {
     componentDidMount() {
         const fillTime = 10000;
         const shakeTime = 1000;

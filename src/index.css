@@ -6,9 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*background-color: #fff;*/
-  background-color: #94b3ba;
-  /*background-color: #00b1dc;*/
 
   position:absolute;
   height: 100%;

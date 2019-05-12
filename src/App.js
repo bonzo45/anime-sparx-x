@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import { SimpleX } from './simple_x';
+import { SparxX } from './sparx_x';
 import { Messages } from './messages';
 
 function App() {
   return (
     <div className="App">
-        <SimpleX/>
+        <SparxX/>
         <Messages/>
     </div>
   );

@@ -20,6 +20,6 @@
     top: -1px;
 }
 
-.message>.text {
+.message > .text {
     padding-top: 12px;
 }
